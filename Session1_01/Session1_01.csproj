@@ -58,8 +58,11 @@
     <Compile Include="MVVM\Views\Authorization_Window.xaml.cs">
       <DependentUpon>Authorization_Window.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\Views\Users_Mainmenu.xaml.cs">
-      <DependentUpon>Users_Mainmenu.xaml</DependentUpon>
+    <Compile Include="MVVM\Views\Logout_detector.xaml.cs">
+      <DependentUpon>Logout_detector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Users_MainMenu.xaml.cs">
+      <DependentUpon>Users_MainMenu.xaml</DependentUpon>
     </Compile>
     <Page Include="MVVM\Views\Add_user.xaml">
       <SubType>Designer</SubType>
@@ -73,7 +76,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVVM\Views\MainWindow.xaml">
+    <Page Include="MVVM\Views\Admins_MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -87,11 +90,19 @@
     <Compile Include="MVVM\Views\Edit_Role.xaml.cs">
       <DependentUpon>Edit_Role.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="MVVM\Views\Admins_MainMenu.xaml.cs">
+      <DependentUpon>Admins_MainMenu.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MVVM\Views\Users_Mainmenu.xaml">
+    <Page Include="MVVM\Views\Logout_detector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Users_MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Fonts\Fonts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,15 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\DS2017_TP09_color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
