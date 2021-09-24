@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Session1_01"
+        xmlns:lang="clr-namespace:Session1_01.Properties.Languages"
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner"
         Topmost="True"
@@ -15,33 +16,12 @@
         Title="Add user"
         Height="400" Width="400">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Style.Setters>
-                <Setter Property="Margin" Value="5 5 5 5"/>
-                <Setter Property="Width" Value="100"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="Margin" Value="0 10 20 0"/>
-            </Style.Setters>
-        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource ButtonStyle}"/>
 
-        <Style TargetType="TextBlock" >
-            <Style.Setters>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Height" Value="20"/>
-            </Style.Setters>
-        </Style>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockStyle}"/>
 
-        <Style TargetType="TextBox" >
-            <Style.Triggers>
-                <Trigger Property="Control.Name" Value="BirthDate">
-                    <Setter Property="TextBox.Text" Value="[dd/mm/yy]"/>
-                </Trigger>
-            </Style.Triggers>
-            <Style.Setters>
-                <Setter Property="TextBox.Height" Value="20"/>
-            </Style.Setters>
-        </Style>
-     
+        <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}"/>
+
         <VisualBrush x:Key="CueBannerBrush" Stretch="None">
             <VisualBrush.Visual>
                 <Label Content="Search" Foreground="LightGray" />
@@ -79,7 +59,7 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0" Grid.Row="0">
-            <TextBlock>Email address</TextBlock>
+            <TextBlock Text="{x:Static lang:en.AddUser_EmailAddress}"/>
         </Border>
         <Border Grid.Column="1" Grid.Row="0">
             <TextBox></TextBox>

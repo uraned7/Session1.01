@@ -55,43 +55,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Authorization_Window.xaml.cs">
+    <Compile Include="MVVM\Views\Authorization_Window.xaml.cs">
       <DependentUpon>Authorization_Window.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Users_Mainmenu.xaml.cs">
+    <Compile Include="MVVM\Views\Users_Mainmenu.xaml.cs">
       <DependentUpon>Users_Mainmenu.xaml</DependentUpon>
     </Compile>
-    <Page Include="Add_user.xaml">
+    <Page Include="MVVM\Views\Add_user.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Authorization_Window.xaml">
+    <Page Include="MVVM\Views\Authorization_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Edit_Role.xaml">
+    <Page Include="MVVM\Views\Edit_Role.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="MVVM\Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Add_user.xaml.cs">
+    <Compile Include="MVVM\Views\Add_user.xaml.cs">
       <DependentUpon>Add_user.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Edit_Role.xaml.cs">
+    <Compile Include="MVVM\Views\Edit_Role.xaml.cs">
       <DependentUpon>Edit_Role.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="MVVM\Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Users_Mainmenu.xaml">
+    <Page Include="MVVM\Views\Users_Mainmenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\TextBlockStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\TextBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,6 +111,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Languages\en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -110,6 +127,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Languages\en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -118,12 +139,40 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\Fonts\TCBI____.TTF" />
+    <Resource Include="Resources\Fonts\TCB_____.TTF" />
+    <Resource Include="Resources\Fonts\TCCB____.TTF" />
+    <Resource Include="Resources\Fonts\TCCEB.TTF" />
+    <Resource Include="Resources\Fonts\TCCM____.TTF" />
+    <Resource Include="Resources\Fonts\TCMI____.TTF" />
+    <Resource Include="Resources\Fonts\TCM_____.TTF" />
+    <Resource Include="Resources\Fonts\TeXGyreAdventor-Bold.ttf" />
+    <Resource Include="Resources\Fonts\TeXGyreAdventor-BoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\TeXGyreAdventor-Italic.ttf" />
+    <Resource Include="Resources\Fonts\TeXGyreAdventor-Regular.ttf" />
+    <Resource Include="Resources\Fonts\verdana.ttf" />
+    <Resource Include="Resources\Fonts\verdanab.ttf" />
+    <Resource Include="Resources\Fonts\verdanai.ttf" />
+    <Resource Include="Resources\Fonts\verdanaz.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MVVM\" />
+    <Folder Include="MVVM\Models\" />
+    <Folder Include="MVVM\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\DS2017_TP09_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Session1_01.Resources.Styles">
+    <Style TargetType="TextBox" x:Key="TextBoxStyle">
+        <Style.Triggers>
+            <Trigger Property="Control.Name" Value="BirthDate">
+                <Setter Property="TextBox.Text" Value="[dd/mm/yy]"/>
+            </Trigger>
+        </Style.Triggers>
+        <Style.Setters>
+            <Setter Property="TextBox.Height" Value="20"/>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>
