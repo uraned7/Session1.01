@@ -2,5 +2,5 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Session1_01.Resources.Fonts">
 
-    <FontFamily x:Key="TexGyreAdventor-Regular">Resources\Fonts\TeXGyreAdventor-Regular.ttf</FontFamily>
+    <FontFamily x:Key="TexGyreAdventor-Regular">/Fonts/#TeXGyreAdventor-Regular</FontFamily>
 </ResourceDictionary>
